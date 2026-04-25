@@ -80,7 +80,7 @@ Eliminar
 
 window.buscarConsulta = async function () {
 
-let nombre = document.getElementById("buscar").value.trim().toLowerCase();
+let texto = document.getElementById("buscar").value.trim().toLowerCase();
 
 lista.innerHTML = "";
 
@@ -90,9 +90,19 @@ datos.forEach((docu) => {
 
 let data = docu.data();
 
-let dueño = (data.dueno || "").toLowerCase();
+let dueno = (data.dueno || "").toLowerCase();
+let telefono = (data.telefono || "").toLowerCase();
+let mascota = (data.mascota || "").toLowerCase();
+let tipo = (data.tipo || "").toLowerCase();
+let proxima = (data.proxima || "").toLowerCase();
 
-if (dueño.includes(nombre)) {
+if (
+dueno.includes(texto) ||
+telefono.includes(texto) ||
+mascota.includes(texto) ||
+tipo.includes(texto) ||
+proxima.includes(texto)
+) {
 
 lista.innerHTML += `
 <div class="card">
@@ -109,7 +119,6 @@ lista.innerHTML += `
 <button onclick="eliminarConsulta('${docu.id}')">
 Eliminar
 </button>
-
 </div>
 `;
 

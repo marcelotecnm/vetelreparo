@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veterinaria</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="contenedor">
+<h1>Registro Veterinario</h1>
+
+<input type="text" id="dueno" placeholder="Nombre del dueño">
+<input type="text" id="telefono" placeholder="Teléfono">
+<input type="text" id="mascota" placeholder="Nombre mascota">
+
+<select id="tipo">
+<option>Perro</option>
+<option>Gato</option>
+<option>Ave</option>
+<option>Otro</option>
+</select>
+
+<input type="text" id="raza" placeholder="Raza">
+<input type="number" id="edad" placeholder="Edad">
+
+<textarea id="motivo" placeholder="Motivo consulta"></textarea>
+<textarea id="tratamiento" placeholder="Tratamiento"></textarea>
+
+<label>Próxima cita:</label>
+<input type="date" id="proxima">
+
+<button onclick="guardarConsulta()">Guardar Consulta</button>
+
+<h2>Consultas Registradas</h2>
+<input type="text" id="buscar" placeholder="Buscar por nombre del dueño">
+<button onclick="buscarConsulta()">Buscar</button>
+<button onclick="mostrarConsultas()">Mostrar Todo</button>
+
+<img src="caballo2.jpg" class="lado izquierda">
+<img src="perro.jpeg" class="lado derecha">
+
+<div id="lista"></div>
+
+</div>
+
+<script type="module" src="seguridad.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

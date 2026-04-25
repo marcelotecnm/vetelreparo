@@ -3,45 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veterinaria</title>
-<link rel="stylesheet" href="estilo.css">
+<title>Login Veterinaria</title>
+<link rel="stylesheet" href="login.css">
 </head>
 <body>
 
-<div class="contenedor">
-<h1>Registro Veterinario</h1>
+<div class="login">
 
-<input type="text" id="dueno" placeholder="Nombre del dueño">
-<input type="text" id="telefono" placeholder="Teléfono">
-<input type="text" id="mascota" placeholder="Nombre mascota">
+<h1>🐾 Veterinaria</h1>
 
-<select id="tipo">
-<option>Perro</option>
-<option>Gato</option>
-<option>Ave</option>
-<option>Otro</option>
-</select>
+<input type="text" id="usuario" placeholder="Usuario">
+<input type="password" id="clave" placeholder="Contraseña">
 
-<input type="text" id="raza" placeholder="Raza">
-<input type="number" id="edad" placeholder="Edad">
+<button onclick="entrar()">Ingresar</button>
 
-<textarea id="motivo" placeholder="Motivo consulta"></textarea>
-<textarea id="tratamiento" placeholder="Tratamiento"></textarea>
-
-<label>Próxima cita:</label>
-<input type="date" id="proxima">
-
-<button onclick="guardarConsulta()">Guardar Consulta</button>
-
-<h2>Consultas Registradas</h2>
-<input type="text" id="buscar" placeholder="Buscar por nombre del dueño">
-<button onclick="buscarConsulta()">Buscar</button>
-<button onclick="mostrarConsultas()">Mostrar Todo</button>
-
-<div id="lista"></div>
+<p id="mensaje"></p>
 
 </div>
 
-<script type="module" src="app.js"></script>
+<script type="module" src="login.js"></script>
 </body>
 </html>
